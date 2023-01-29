@@ -35,20 +35,15 @@ $questions=[
     "tu nombre es?" => "Mi nombre es " . $bot->getName(),
     "tu eres?" => "Yo soy una " . $bot->getGender()
 ];
-
 if (isset($_GET['msg'])) {
    
     $msg = strtolower($_GET['msg']);
     $bot->hears($msg, function (Bot $botty) {
         global $msg;
         global $questions;
-        if ($msg == 'where is the ntu?' || $msg == "where is the ntu?") {
-            $botty->reply('10617台北市大安區羅斯福路四段1號'); }
-            if ($msg == '' || $msg == "what about ntu?") {
-                $botty->reply('National Taiwan University (NTU) is one of the top public universities in Taipei City, Taiwan. It is ranked #77 in QS World University Rankings 2023.'); }
-              
-                    
-            elseif ($botty->ask($msg, $questions) == "NADA") {
+        if ($msg == 'hi' || $msg == "hello") {
+            $botty->reply('Hola');
+        } elseif ($botty->ask($msg, $questions) == "") {
             $botty->reply("Sorry, Questions must be bot related.");
         } else {
             $botty->reply($botty->ask($msg,$questions));
