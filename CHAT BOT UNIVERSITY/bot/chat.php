@@ -2,10 +2,17 @@
 include "Bot.php";
 $bot = new Bot;
 $questions=[
-    //que es covid
+    //que es NTU
     "Where is the ntu?" => "10617台北市大安區羅斯福路四段1號",
-    "What about NTU University?" => "National Taiwan University (NTU) is one of the top public universities in Taipei City, Taiwan. It is ranked #77 in QS World University Rankings 2023.",
+    
+    "What about NTU University?" => "National Taiwan University (NTU) is one of the top public universities in Taipei City, Taiwan.
+    It is ranked #77 in QS World University Rankings 2023.",
+    
     "What is the required level of English?" => "TOEFL iBT: 71,IELTS: 5.5,TOEIC: 750,GEPT: High-Intermediate",
+    
+    "What documents are necessary?" => "You need your completed student certificates,
+    two letters of recommendation, extracurricular activities, certificate that you can speak Chinese",
+   
    
     
        
